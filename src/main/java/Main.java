@@ -16,7 +16,6 @@ public class Main {
         TwitterBot bot = TwitterBot.builder()
                 .twitter(TwitterApi.fromTwitter(TwitterFactory.getSingleton()))
                 .task(RssTask.create("https://www.reddit.com/r/programming/.rss"), 6, TimeUnit.HOURS)
-                .task(RssTask.create("https://medium.com/feed/tag/programming"), 1, TimeUnit.DAYS)
                 .build();
 
         bot.run();
